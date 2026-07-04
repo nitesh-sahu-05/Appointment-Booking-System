@@ -7,8 +7,8 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     proxy: {
-      '/auth': 'https://appointment-booking-system-2-hcvy.onrender.com',
-      '/api': 'https://appointment-booking-system-2-hcvy.onrender.com',
+      '/auth': 'https://appointment-booking-system-backend-r37c.onrender.com',
+      '/api': 'https://appointment-booking-system-backend-r37c.onrender.com',
     },
   },
 })
