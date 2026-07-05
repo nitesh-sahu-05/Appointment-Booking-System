@@ -62,12 +62,10 @@ const DoctorRegister = () => {
         {error ? <div className="mb-4 rounded-md bg-red-50 p-3 text-sm text-red-600">{error}</div> : null}
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-slate-700">Full name</label>
+            <label className="block text-sm font-medium text-slate-700">Full name</label>
             <input
               type="text"
               value={name}
-              id='name'
-              name='name'
               required
               onChange={(e) => setName(e.target.value)}
               className="mt-2 w-full rounded-2xl border border-slate-300 px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
@@ -76,12 +74,10 @@ const DoctorRegister = () => {
           </div>
 
           <div>
-            <label htmlFor="specialty" className="block text-sm font-medium text-slate-700">Specialty</label>
+            <label className="block text-sm font-medium text-slate-700">Specialty</label>
             <input
               type="text"
               value={specialty}
-              id='specialty'
-              name='specialty'
               required
               onChange={(e) => setSpecialty(e.target.value)}
               className="mt-2 w-full rounded-2xl border border-slate-300 px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
@@ -91,25 +87,21 @@ const DoctorRegister = () => {
 
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
-              <label htmlFor="experience" className="block text-sm font-medium text-slate-700">Experience (years)</label>
+              <label className="block text-sm font-medium text-slate-700">Experience (years)</label>
               <input
                 type="number"
                 min="0"
                 value={experience}
-                id='experience'
-                name='experience'
                 onChange={(e) => setExperience(e.target.value)}
                 className="mt-2 w-full rounded-2xl border border-slate-300 px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
               />
             </div>
             <div>
-              <label htmlFor="fees" className="block text-sm font-medium text-slate-700">Fees</label>
+              <label className="block text-sm font-medium text-slate-700">Fees</label>
               <input
                 type="number"
                 min="0"
                 value={fees}
-                id='fees'
-                name='fees'
                 onChange={(e) => setFees(e.target.value)}
                 className="mt-2 w-full rounded-2xl border border-slate-300 px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
               />
@@ -117,12 +109,10 @@ const DoctorRegister = () => {
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-slate-700">Email</label>
+            <label className="block text-sm font-medium text-slate-700">Email</label>
             <input
               type="email"
               value={email}
-              id='email'
-              name='email'
               required
               onChange={(e) => setEmail(e.target.value)}
               className="mt-2 w-full rounded-2xl border border-slate-300 px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
@@ -131,12 +121,10 @@ const DoctorRegister = () => {
           </div>
 
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-slate-700">Password</label>
+            <label className="block text-sm font-medium text-slate-700">Password</label>
             <input
               type="password"
               value={password}
-              id='password'
-              name='password'
               required
               onChange={(e) => setPassword(e.target.value)}
               className="mt-2 w-full rounded-2xl border border-slate-300 px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
@@ -157,12 +145,12 @@ const DoctorRegister = () => {
                     <input type="date" value={slot.date} onChange={(e) => handleSlotChange(idx, 'date', e.target.value)} className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2" />
                   </div>
                   <div>
-                    <label htmlFor="startTime" className="block text-xs text-slate-600">Start</label>
-                    <input type="time" id="startTime" value={slot.startTime} onChange={(e) => handleSlotChange(idx, 'startTime', e.target.value)} className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2" />
+                    <label className="block text-xs text-slate-600">Start</label>
+                    <input type="time" value={slot.startTime} onChange={(e) => handleSlotChange(idx, 'startTime', e.target.value)} className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2" />
                   </div>
                   <div>
-                    <label htmlFor="endTime" className="block text-xs text-slate-600">End</label>
-                    <input type="time" id="endTime" value={slot.endTime} onChange={(e) => handleSlotChange(idx, 'endTime', e.target.value)} className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2" />
+                    <label className="block text-xs text-slate-600">End</label>
+                    <input type="time" value={slot.endTime} onChange={(e) => handleSlotChange(idx, 'endTime', e.target.value)} className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2" />
                   </div>
                   <div className="text-right">
                     <button type="button" onClick={() => removeSlot(idx)} className="mt-1 rounded-lg bg-rose-100 px-3 py-2 text-sm text-rose-700">Remove</button>

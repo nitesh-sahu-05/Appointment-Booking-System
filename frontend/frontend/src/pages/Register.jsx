@@ -41,11 +41,9 @@ const Register = () => {
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">Full name</label>
+            <label className="block text-sm font-medium text-gray-700">Full name</label>
             <input
               type="text"
-              id="name"
-              name="name"
               required
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -55,11 +53,9 @@ const Register = () => {
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+            <label className="block text-sm font-medium text-gray-700">Email</label>
             <input
               type="email"
-              id="email"
-              name="email"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -69,11 +65,9 @@ const Register = () => {
           </div>
 
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
+            <label className="block text-sm font-medium text-gray-700">Password</label>
             <input
               type="password"
-              id="password"
-              name="password"
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -83,11 +77,9 @@ const Register = () => {
           </div>
 
           <div>
-            <label htmlFor="confirm" className="block text-sm font-medium text-gray-700">Confirm password</label>
+            <label className="block text-sm font-medium text-gray-700">Confirm password</label>
             <input
               type="password"
-              id="confirm"
-              name="confirm"
               required
               value={confirm}
               onChange={(e) => setConfirm(e.target.value)}

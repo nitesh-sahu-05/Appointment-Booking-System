@@ -35,11 +35,9 @@ const DoctorLogin = () => {
         {error ? <div className="mb-4 rounded-md bg-red-50 p-3 text-sm text-red-600">{error}</div> : null}
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-slate-700">Email</label>
+            <label className="block text-sm font-medium text-slate-700">Email</label>
             <input
               type="email"
-              id="email"
-              name="email"
               value={email}
               required
               onChange={(e) => setEmail(e.target.value)}
@@ -48,11 +46,9 @@ const DoctorLogin = () => {
             />
           </div>
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-slate-700">Password</label>
+            <label className="block text-sm font-medium text-slate-700">Password</label>
             <input
               type="password"
-              id="password"
-              name="password"
               value={password}
               required
               onChange={(e) => setPassword(e.target.value)}
